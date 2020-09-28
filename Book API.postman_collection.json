@@ -1,0 +1,1223 @@
+{
+	"info": {
+		"_postman_id": "7c4fb89b-f2ee-4bef-9ba6-21ec062579b5",
+		"name": "Book API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Countries",
+			"item": [
+				{
+					"name": "GetCountries",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6InR0aF9FZnotQ3czNkVYTFRXN0RsSCJ9.eyJpc3MiOiJodHRwczovL2NvcmVxdW90ZXMudXMuYXV0aDAuY29tLyIsInN1YiI6ImF1dGgwfDVmMDU3OGVmMmViMzAzMDAxOWM4NDU2NCIsImF1ZCI6Imh0dHBzOi8vbG9jYWxob3N0OjQ0MzI0LyIsImlhdCI6MTU5NDE5NDc0NCwiZXhwIjoxNTk0MjgxMTQ0LCJhenAiOiJyZjBXNkhON2lhYzBNa1F1bm9vVEdiOEZ3a1JrYlZpZSIsImd0eSI6InBhc3N3b3JkIn0.rs-9Db8C4GP-aEEHKN5KjsOERGu_NsetlYDnf8wb4jWe06zBNfvmVQudagpC9kw0IdGJbYBRLumw30T8QUo7N8KBl-m5hQTI29BJ_46pkDLgpsrtCJetKxoF_2_Z9sgUOhnNMTusig1ppCur8pz_VrhPoJDIhO9-aVz1R_ufFVzsk7ywVmjGIbitW-P9m4xYiKEhB1LKKgAyFhh1XvDXp7ipL6lNnSlPzJMLon76z_bhb-tJhHPXqL0gN09Q-SFE1DHDFBnsydJnXyAnZl40KLnePFgrExtz91N9uFcXuob4qqJvT9d6iQrBEWci5HqPcrw_axERKpB8Vdg95LvyCQ",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:44338/api/countries",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44338",
+							"path": [
+								"api",
+								"countries"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetCountry",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6InR0aF9FZnotQ3czNkVYTFRXN0RsSCJ9.eyJpc3MiOiJodHRwczovL2NvcmVxdW90ZXMudXMuYXV0aDAuY29tLyIsInN1YiI6ImF1dGgwfDVmMDU3OGVmMmViMzAzMDAxOWM4NDU2NCIsImF1ZCI6Imh0dHBzOi8vbG9jYWxob3N0OjQ0MzI0LyIsImlhdCI6MTU5NDE5NDc0NCwiZXhwIjoxNTk0MjgxMTQ0LCJhenAiOiJyZjBXNkhON2lhYzBNa1F1bm9vVEdiOEZ3a1JrYlZpZSIsImd0eSI6InBhc3N3b3JkIn0.rs-9Db8C4GP-aEEHKN5KjsOERGu_NsetlYDnf8wb4jWe06zBNfvmVQudagpC9kw0IdGJbYBRLumw30T8QUo7N8KBl-m5hQTI29BJ_46pkDLgpsrtCJetKxoF_2_Z9sgUOhnNMTusig1ppCur8pz_VrhPoJDIhO9-aVz1R_ufFVzsk7ywVmjGIbitW-P9m4xYiKEhB1LKKgAyFhh1XvDXp7ipL6lNnSlPzJMLon76z_bhb-tJhHPXqL0gN09Q-SFE1DHDFBnsydJnXyAnZl40KLnePFgrExtz91N9uFcXuob4qqJvT9d6iQrBEWci5HqPcrw_axERKpB8Vdg95LvyCQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"Title\": \"Mark Title\",\r\n\"Author\": \"Mark\",\r\n\"Description\": \"Mark description\",\r\n\"Type\": \"Devotional\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44338/api/countries/4",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44338",
+							"path": [
+								"api",
+								"countries",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetCountryOfAnAuthor",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6InR0aF9FZnotQ3czNkVYTFRXN0RsSCJ9.eyJpc3MiOiJodHRwczovL2NvcmVxdW90ZXMudXMuYXV0aDAuY29tLyIsInN1YiI6ImF1dGgwfDVmMDU3OGVmMmViMzAzMDAxOWM4NDU2NCIsImF1ZCI6Imh0dHBzOi8vbG9jYWxob3N0OjQ0MzI0LyIsImlhdCI6MTU5NDE5NDc0NCwiZXhwIjoxNTk0MjgxMTQ0LCJhenAiOiJyZjBXNkhON2lhYzBNa1F1bm9vVEdiOEZ3a1JrYlZpZSIsImd0eSI6InBhc3N3b3JkIn0.rs-9Db8C4GP-aEEHKN5KjsOERGu_NsetlYDnf8wb4jWe06zBNfvmVQudagpC9kw0IdGJbYBRLumw30T8QUo7N8KBl-m5hQTI29BJ_46pkDLgpsrtCJetKxoF_2_Z9sgUOhnNMTusig1ppCur8pz_VrhPoJDIhO9-aVz1R_ufFVzsk7ywVmjGIbitW-P9m4xYiKEhB1LKKgAyFhh1XvDXp7ipL6lNnSlPzJMLon76z_bhb-tJhHPXqL0gN09Q-SFE1DHDFBnsydJnXyAnZl40KLnePFgrExtz91N9uFcXuob4qqJvT9d6iQrBEWci5HqPcrw_axERKpB8Vdg95LvyCQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"Title\": \"John Title\",\r\n\"Author\": \"John\",\r\n\"Description\": \"John description\",\r\n\"Type\": \"Romantic Comedy\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44338/api/countries/authors/2",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44338",
+							"path": [
+								"api",
+								"countries",
+								"authors",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAuthorsFromACountry",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "grant_type",
+									"value": "password",
+									"type": "text"
+								},
+								{
+									"key": "client_id",
+									"value": "rf0W6HN7iac0MkQunooTGb8FwkRkbVie",
+									"type": "text"
+								},
+								{
+									"key": "audience",
+									"value": "https://localhost:44324/",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "sara@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "Password@13",
+									"type": "text"
+								},
+								{
+									"key": "scope",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "client_secret",
+									"value": "fJe31YY7BeTYKNHgyn5bZfJ1rcQyhh5V2CIcX5qIR0URi50Ck7oRMRuXGdWL43FK",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://localhost:44338/api/countries/1/authors",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44338",
+							"path": [
+								"api",
+								"countries",
+								"1",
+								"authors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateCountry",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Name\": \"England\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44338/api/countries",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44338",
+							"path": [
+								"api",
+								"countries"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateCountry",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Id\": \"6\",\r\n    \"Name\": \"Poland\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44338/api/countries/6",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44338",
+							"path": [
+								"api",
+								"countries",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteCountry",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44338/api/countries/6",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44338",
+							"path": [
+								"api",
+								"countries",
+								"6"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Categories",
+			"item": [
+				{
+					"name": "GetCategories",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6InR0aF9FZnotQ3czNkVYTFRXN0RsSCJ9.eyJpc3MiOiJodHRwczovL2NvcmVxdW90ZXMudXMuYXV0aDAuY29tLyIsInN1YiI6ImF1dGgwfDVmMDU3OGVmMmViMzAzMDAxOWM4NDU2NCIsImF1ZCI6Imh0dHBzOi8vbG9jYWxob3N0OjQ0MzI0LyIsImlhdCI6MTU5NDE5NDc0NCwiZXhwIjoxNTk0MjgxMTQ0LCJhenAiOiJyZjBXNkhON2lhYzBNa1F1bm9vVEdiOEZ3a1JrYlZpZSIsImd0eSI6InBhc3N3b3JkIn0.rs-9Db8C4GP-aEEHKN5KjsOERGu_NsetlYDnf8wb4jWe06zBNfvmVQudagpC9kw0IdGJbYBRLumw30T8QUo7N8KBl-m5hQTI29BJ_46pkDLgpsrtCJetKxoF_2_Z9sgUOhnNMTusig1ppCur8pz_VrhPoJDIhO9-aVz1R_ufFVzsk7ywVmjGIbitW-P9m4xYiKEhB1LKKgAyFhh1XvDXp7ipL6lNnSlPzJMLon76z_bhb-tJhHPXqL0gN09Q-SFE1DHDFBnsydJnXyAnZl40KLnePFgrExtz91N9uFcXuob4qqJvT9d6iQrBEWci5HqPcrw_axERKpB8Vdg95LvyCQ",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:44338/api/categories",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44338",
+							"path": [
+								"api",
+								"categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetCategory",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "client_id",
+									"value": "rf0W6HN7iac0MkQunooTGb8FwkRkbVie",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "sara@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "Password@13",
+									"type": "text"
+								},
+								{
+									"key": "connection",
+									"value": "AuthUserDb",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://localhost:44338/api/categories/1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44338",
+							"path": [
+								"api",
+								"categories",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAllCategoriesForABook",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44338/api/categories/books/5",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44338",
+							"path": [
+								"api",
+								"categories",
+								"books",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAllBooksForCategory",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44338/api/categories/4/books",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44338",
+							"path": [
+								"api",
+								"categories",
+								"4",
+								"books"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateCategory",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"name\": \"Comedy\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44338/api/categories",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44338",
+							"path": [
+								"api",
+								"categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateCategory",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 8,\r\n        \"name\": \"Comedies\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44338/api/categories/8",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44338",
+							"path": [
+								"api",
+								"categories",
+								"8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteCategory",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44338/api/categories/8",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44338",
+							"path": [
+								"api",
+								"categories",
+								"8"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Reviewers",
+			"item": [
+				{
+					"name": "GetReviewers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44338/api/reviewers",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44338",
+							"path": [
+								"api",
+								"reviewers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetReviewer",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44338/api/reviewers/1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44338",
+							"path": [
+								"api",
+								"reviewers",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetReviewsByReviewer",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44338/api/reviewers/1/reviews",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44338",
+							"path": [
+								"api",
+								"reviewers",
+								"1",
+								"reviews"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetReviewerOfAReview",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44338/api/reviewers/1/reviewer",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44338",
+							"path": [
+								"api",
+								"reviewers",
+								"1",
+								"reviewer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateReviewer",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"FirstName\": \"Sara\",\r\n\"LastName\": \"Logan\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44338/api/reviewers",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44338",
+							"path": [
+								"api",
+								"reviewers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateReviewer",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"Id\": 8,\r\n\"FirstName\": \"Sara\",\r\n\"LastName\": \"Michell\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44338/api/reviewers/8",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44338",
+							"path": [
+								"api",
+								"reviewers",
+								"8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteReviewer",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44338/api/reviewers/8",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44338",
+							"path": [
+								"api",
+								"reviewers",
+								"8"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Reviews",
+			"item": [
+				{
+					"name": "GetReviews",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44338/api/reviews",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44338",
+							"path": [
+								"api",
+								"reviews"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetReview",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44338/api/reviews/5",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44338",
+							"path": [
+								"api",
+								"reviews",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetReviewsOfABook",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44338/api/reviews/books/1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44338",
+							"path": [
+								"api",
+								"reviews",
+								"books",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetBookOfAReview",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44338/api/reviews/1/book",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44338",
+							"path": [
+								"api",
+								"reviews",
+								"1",
+								"book"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateReview",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"headline\": \"Awesome Headline\",\r\n        \"reviewText\": \"Awesome Book and I really liked this book and suggest this\",\r\n        \"rating\": 5,\r\n        \"Reviewer\": {\r\n            \"Id\": 4,\r\n            \"FirstName\": \"A\",\r\n            \"LastName\": \"B\"\r\n        },\r\n        \"Book\": {\r\n            \"Id\": 1,\r\n            \"ISBN\": \"123456\",\r\n            \"Title\": \"Demo\"\r\n        }\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44338/api/reviews",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44338",
+							"path": [
+								"api",
+								"reviews"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateReview",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"id\": 8,\r\n        \"headline\": \"Awesome Headline\",\r\n        \"reviewText\": \"Awesome Book and I really liked this book and suggest this\",\r\n        \"rating\": 5,\r\n        \"Reviewer\": {\r\n            \"Id\": 4,\r\n            \"FirstName\": \"A\",\r\n            \"LastName\": \"B\"\r\n        },\r\n        \"Book\": {\r\n            \"Id\": 1,\r\n            \"ISBN\": \"123456\",\r\n            \"Title\": \"Demo\"\r\n        }\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44338/api/reviews/8",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44338",
+							"path": [
+								"api",
+								"reviews",
+								"8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteReview",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44338/api/reviews/8",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44338",
+							"path": [
+								"api",
+								"reviews",
+								"8"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Authors",
+			"item": [
+				{
+					"name": "GetAuthors",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44338/api/authors",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44338",
+							"path": [
+								"api",
+								"authors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAuthor",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44338/api/authors/5",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44338",
+							"path": [
+								"api",
+								"authors",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAuthorsOfABook",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44338/api/authors/1/books",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44338",
+							"path": [
+								"api",
+								"authors",
+								"1",
+								"books"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetBooksByAuthor",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44338/api/authors/books/2",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44338",
+							"path": [
+								"api",
+								"authors",
+								"books",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateAuthor",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"FirstName\": \"Sara\",\r\n    \"LastName\": \"Logan\",\r\n    \"Country\": {\r\n        \"Id\": 1,\r\n        \"Name\": \"A\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44338/api/authors",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44338",
+							"path": [
+								"api",
+								"authors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateAuthor",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Id\": 6,\r\n    \"FirstName\": \"Sara\",\r\n    \"LastName\": \"Mitchell\",\r\n    \"Country\": {\r\n        \"Id\": 1,\r\n        \"Name\": \"A\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44338/api/authors/6",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44338",
+							"path": [
+								"api",
+								"authors",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteAuthor",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44338/api/authors/6",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44338",
+							"path": [
+								"api",
+								"authors",
+								"6"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Books",
+			"item": [
+				{
+					"name": "GetBooks",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44338/api/books",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44338",
+							"path": [
+								"api",
+								"books"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetBook",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44338/api/books/2",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44338",
+							"path": [
+								"api",
+								"books",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetBookByISBN",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44338/api/books/isbn/12345",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44338",
+							"path": [
+								"api",
+								"books",
+								"isbn",
+								"12345"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetBookRating",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44338/api/books/3/rating",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44338",
+							"path": [
+								"api",
+								"books",
+								"3",
+								"rating"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateBook",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n{\r\n\"Title\": \"Creating First Book 1\",\r\n\"Isbn\": \"98701231\",\r\n\"DatePublished\": \"4/1/2019\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44338/api/books?authId=2&authId=5&catId=2&catId=3&catId=5",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44338",
+							"path": [
+								"api",
+								"books"
+							],
+							"query": [
+								{
+									"key": "authId",
+									"value": "2"
+								},
+								{
+									"key": "authId",
+									"value": "5"
+								},
+								{
+									"key": "catId",
+									"value": "2"
+								},
+								{
+									"key": "catId",
+									"value": "3"
+								},
+								{
+									"key": "catId",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateBook",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Id\": 6,\r\n    \"Title\": \"Updating First Book\",\r\n    \"Isbn\": \"9870123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44338/api/books/6?authId=2&authId=4&catId=2&catId=3&catId=5",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44338",
+							"path": [
+								"api",
+								"books",
+								"6"
+							],
+							"query": [
+								{
+									"key": "authId",
+									"value": "2"
+								},
+								{
+									"key": "authId",
+									"value": "4"
+								},
+								{
+									"key": "catId",
+									"value": "2"
+								},
+								{
+									"key": "catId",
+									"value": "3"
+								},
+								{
+									"key": "catId",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteBook",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44338/api/books/7",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44338",
+							"path": [
+								"api",
+								"books",
+								"7"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
